@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — My Sports Academy</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand"><a href="../../index.html">DevTeamTejas</a></div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="../../index.html" data-i18n="nav.home">Home</a>
+    <a href="index.html" data-i18n="app6.name">My Sports Academy</a>
+    <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="hi">हि</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <p class="tag mb-2" data-i18n="app6.name">My Sports Academy</p>
+    <h1 data-i18n="support.title">Support</h1>
+    <p data-i18n="support.subtitle">We're here to help.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title mb-3" data-i18n="support.faq_title">FAQ</h2>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q" data-i18n="support.faq1_q">How do I reset my password?</button><div class="faq-a" data-i18n="support.faq1_a">Answer.</div></div>
+      <div class="faq-item"><button class="faq-q" data-i18n="support.faq2_q">Is the app available on both iOS and Android?</button><div class="faq-a" data-i18n="support.faq2_a">Answer.</div></div>
+      <div class="faq-item"><button class="faq-q" data-i18n="support.faq3_q">How do I cancel my subscription?</button><div class="faq-a" data-i18n="support.faq3_a">Answer.</div></div>
+      <div class="faq-item"><button class="faq-q" data-i18n="support.faq4_q">I found a bug. How do I report it?</button><div class="faq-a" data-i18n="support.faq4_a">Answer.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title mb-2" data-i18n="support.contact_title">Contact Us</h2>
+    <p class="section-sub" data-i18n="support.contact_sub">Fill out the form and we'll reply within 1–2 business days.</p>
+    <div id="formSuccess" style="display:none;padding:1rem;background:#d4edda;border:1px solid #c3e6cb;border-radius:8px;margin-bottom:1rem;color:#155724" data-i18n="support.success">Thanks! Message sent.</div>
+    <form class="support-form" id="contactForm" novalidate>
+      <div class="form-group"><label data-i18n="support.name_label">Your Name</label><input type="text" required data-i18n-placeholder="support.name_ph" placeholder="Jane Smith" /></div>
+      <div class="form-group"><label data-i18n="support.email_label">Email</label><input type="email" required data-i18n-placeholder="support.email_ph" placeholder="jane@example.com" /></div>
+      <div class="form-group"><label data-i18n="support.subject_label">Subject</label><input type="text" required data-i18n-placeholder="support.subject_ph" placeholder="Brief description" /></div>
+      <div class="form-group">
+        <label data-i18n="support.app_select_label">Related App</label>
+        <select id="appSelect" name="app">
+          <option value="app1"  data-i18n="app1.name">KhetBook (Agri Register)</option>
+          <option value="app2"  data-i18n="app2.name">Master Unit Calc</option>
+          <option value="app3"  data-i18n="app3.name">Mastero</option>
+          <option value="app4"  data-i18n="app4.name">Money Trail</option>
+          <option value="app5"  data-i18n="app5.name">My Class Manager</option>
+          <option value="app6" selected data-i18n="app6.name">My Sports Academy</option>
+          <option value="app7"  data-i18n="app7.name">Yoga Rhythm</option>
+        </select>
+      </div>
+      <div class="form-group"><label data-i18n="support.message_label">Message</label><textarea id="message" required data-i18n-placeholder="support.message_ph" placeholder="Describe your issue..."></textarea></div>
+      <button type="submit" class="btn-submit" data-i18n="support.submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4 data-i18n="footer.company">DevTeamTejas</h4>
+      <p style="font-size:0.875rem;color:var(--text2)" data-i18n="footer.tagline">Building apps people love.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.apps_col">Apps</h4>
+      <a href="../../index.html#apps" data-i18n="nav.apps">All Apps</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.legal_col">Legal</h4>
+      <a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a>
+      <a href="support.html" data-i18n="nav.support">Support</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.contact_col">Contact</h4>
+      <a href="mailto:devteamtejas@gmail.com" data-i18n="footer.email">devteamtejas@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.copyright">© 2026 DevTeamTejas. All rights reserved.</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/i18next@23/i18next.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+</body>
+</html>

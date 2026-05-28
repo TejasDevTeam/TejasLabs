@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — KhetBook (Agri Register)</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand"><a href="../../index.html">DevTeamTejas</a></div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="../../index.html" data-i18n="nav.home">Home</a>
+    <a href="index.html" data-i18n="app1.name">KhetBook (Agri Register)</a>
+    <a href="support.html" data-i18n="nav.support">Support</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="hi">हि</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <p class="tag mb-2" data-i18n="app1.name">KhetBook (Agri Register)</p>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: May 22, 2026</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container prose">
+
+    <h2>Introduction</h2>
+    <p>Welcome to <strong>KhetBook</strong> (the "App"), developed to help small and medium Indian farmers manage their agricultural operations, financial ledgers, and marketplace activities. Your privacy is of paramount importance to us. This Privacy Policy outlines our commitment to protecting your personal and agricultural data in compliance with the Digital Personal Data Protection (DPDP) Act, 2023 of India, as well as Google Play Store and Apple App Store guidelines.</p>
+
+    <h2>Executive Summary</h2>
+    <ul>
+      <li><strong>Offline-First by Design:</strong> KhetBook stores your farm logs, expense ledgers, and transactions directly on your own device using a secure local SQLite database. By default, nothing is sent to our servers.</li>
+      <li><strong>Optional Cloud Synchronisation:</strong> You can opt in to sync records to the cloud (Firebase) to access them across multiple devices or share with family members or bookkeepers.</li>
+      <li><strong>No Commercial Data Monetisation:</strong> We never sell, rent, or trade your agricultural yields, transaction books, or personal information to third-party marketing companies, banks, or fertiliser/pesticide corporations.</li>
+      <li><strong>Location Privacy:</strong> We use location coordinates exclusively to fetch local weather updates and reverse-geocode village names. This data is processed in real time and is not tracked.</li>
+    </ul>
+
+    <h2>Information We Collect</h2>
+    <p><strong>Personal & Profile Information (Optional):</strong> Phone number (only if you choose OTP authentication for cloud sync); farm name, location (village, district, state), and mobile number for ledger PDF customisation.</p>
+    <p><strong>Agricultural & Financial Records:</strong> All transactional data you enter is stored securely on your device — income/expense ledgers, service logs, crop diary entries, and scanned bill amounts (OCR processed entirely on-device).</p>
+    <p><strong>Location Data:</strong> Used only in real time to fetch weather forecasts and your village name. Not stored or tracked.</p>
+    <p><strong>Analytics:</strong> Anonymous crash reports via Firebase Crashlytics to improve stability. No personal farm data is included.</p>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To provide offline farm management, ledger, and diary features</li>
+      <li>To optionally sync your data across devices via Firebase</li>
+      <li>To fetch live Mandi prices and localised weather forecasts</li>
+      <li>To improve app performance and fix bugs</li>
+      <li>To comply with applicable laws</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p>We do not sell your data. We use Firebase (Google) for optional cloud sync and authentication, Open-Meteo for weather forecasts, and AGMARKNET APIs for Mandi price data. Each is governed by their own privacy policies. Your raw farm financial data is never shared with any third party.</p>
+
+    <h2>Data Retention</h2>
+    <p>Local data is retained on your device until you delete it or uninstall the App. Cloud data (if sync is enabled) is retained until you delete your account. You can request full data deletion by contacting us.</p>
+
+    <h2>Your Rights (DPDP Act 2023 / GDPR)</h2>
+    <ul>
+      <li>Right to access your personal data</li>
+      <li>Right to correction of inaccurate data</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to data portability</li>
+      <li>Right to withdraw consent at any time</li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>Your data is stored in a local encrypted SQLite database. Cloud sync uses HTTPS/TLS and Firebase security rules. Bill scanning (OCR) is processed entirely on-device — no document images are uploaded to external servers.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The App is not directed to children under 13. We do not knowingly collect personal data from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Significant changes will be communicated via an in-app notice. Continued use after changes constitutes acceptance.</p>
+
+    <h2>Contact Us</h2>
+    <p><strong>DevTeamTejas</strong><br>Email: <a href="mailto:devteamtejas@gmail.com">devteamtejas@gmail.com</a></p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col"><h4 data-i18n="footer.company">DevTeamTejas</h4></div>
+    <div class="footer-col"><h4 data-i18n="footer.apps_col">Apps</h4><a href="../../index.html#apps" data-i18n="nav.apps">All Apps</a></div>
+    <div class="footer-col"><h4 data-i18n="footer.legal_col">Legal</h4><a href="privacy.html" data-i18n="nav.privacy">Privacy Policy</a><a href="support.html" data-i18n="nav.support">Support</a></div>
+  </div>
+  <div class="footer-bottom"><span data-i18n="footer.copyright">© 2026 DevTeamTejas. All rights reserved.</span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/i18next@23/i18next.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+</body>
+</html>
