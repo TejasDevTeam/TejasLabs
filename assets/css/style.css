@@ -106,23 +106,45 @@ img { max-width: 100%; display: block; }
 /* ===== APP GRID ===== */
 .apps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
 }
 .app-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.75rem;
+  overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: transform var(--transition), box-shadow var(--transition);
-  display: flex; flex-direction: column; gap: 0.75rem;
+  display: flex; flex-direction: column;
 }
-.app-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(108,99,255,0.18); }
-.app-icon { width: 64px; height: 64px; border-radius: 14px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: 2rem; }
-.app-card h3 { font-size: 1.15rem; font-weight: 700; }
-.app-card p { color: var(--text2); font-size: 0.9rem; flex: 1; }
-.app-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.app-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(108,99,255,0.22); }
+.app-card-banner {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+}
+.app-card-banner img.fg-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.app-card-banner img.icon-img {
+  position: absolute;
+  bottom: -22px;
+  left: 1.25rem;
+  width: 60px; height: 60px;
+  border-radius: 14px;
+  border: 3px solid var(--card-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
+.app-card-body {
+  padding: 2.5rem 1.25rem 1.25rem;
+  display: flex; flex-direction: column; gap: 0.6rem; flex: 1;
+}
+.app-card-body h3 { font-size: 1.1rem; font-weight: 700; margin: 0; }
+.app-card-body p { color: var(--text2); font-size: 0.875rem; line-height: 1.55; flex: 1; margin: 0; }
+.app-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
 .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; background: var(--bg3); color: var(--text2); border: 1px solid var(--border); transition: all var(--transition); }
 .badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); text-decoration: none; }
 .badge-sm { font-size: 0.72rem; padding: 4px 10px; }
