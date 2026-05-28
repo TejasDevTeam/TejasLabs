@@ -131,6 +131,15 @@ function initFaq() {
 const WEB3FORMS_KEY = '9afa997e-87a9-4057-aca3-2e5007f82d74';
 const SHEETS_URL    = 'https://script.google.com/macros/s/AKfycbw7nc9NkHG7Uvgt1z-1OuFAUWduQTQkCyLX62jTLafqKaGODUrZSSS1vHHgeKVk_Mvn5g/exec';
 
+/* Generate a unique support ticket token e.g. DTT-A3X9K2M1
+   Uses unambiguous chars (no 0/O, 1/I) for easy readability */
+function generateToken() {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let t = 'DTT-';
+  for (let i = 0; i < 8; i++) t += chars[Math.floor(Math.random() * chars.length)];
+  return t;
+}
+
 async function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -144,12 +153,15 @@ async function initContactForm() {
     if (successDiv) successDiv.style.display = 'none';
     if (errorDiv)   errorDiv.style.display   = 'none';
 
-    const origText   = btn.textContent;
-    btn.disabled     = true;
-    btn.textContent  = 'Sending…';
+    const origText  = btn.textContent;
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+
+    const token = generateToken();
 
     /* Collect form data */
     const raw = {
+      token,
       name:    form.querySelector('[name="name"]').value.trim(),
       email:   form.querySelector('[name="email"]').value.trim(),
       subject: form.querySelector('[name="subject"]').value.trim(),
@@ -163,7 +175,7 @@ async function initContactForm() {
       /* 1 — Web3Forms (email notification) */
       const fd = new FormData();
       fd.append('access_key', WEB3FORMS_KEY);
-      fd.append('subject',    'Support Request — DevTeamTejas: ' + raw.subject);
+      fd.append('subject',    '[' + token + '] Support — ' + raw.subject);
       fd.append('from_name',  'DevTeamTejas Support');
       Object.entries(raw).forEach(([k, v]) => fd.append(k, v));
 
@@ -171,14 +183,14 @@ async function initContactForm() {
       const w3json = await w3res.json();
       ok = w3json.success;
 
-      /* 2 — Google Sheets (storage) — runs when SHEETS_URL is configured */
+      /* 2 — Google Sheets (storage) */
       if (SHEETS_URL) {
         fetch(SHEETS_URL, {
-          method: 'POST',
-          mode:   'no-cors',
+          method:  'POST',
+          mode:    'no-cors',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(raw),
-        }).catch(() => {}); // non-blocking; don't fail the form if Sheets is down
+          body:    JSON.stringify(raw),
+        }).catch(() => {});
       }
     } catch (_) { ok = false; }
 
@@ -186,9 +198,15 @@ async function initContactForm() {
     btn.textContent = origText;
 
     if (ok) {
-      if (successDiv) { successDiv.style.display = 'block'; }
+      if (successDiv) {
+        successDiv.innerHTML =
+          '<strong>Message sent successfully!</strong><br>' +
+          'Your reference token is: <strong style="font-size:1.15rem;letter-spacing:0.08em;font-family:monospace">' + token + '</strong><br>' +
+          '<small style="opacity:0.85">Please save this token — quote it in any follow-up email so we can find your case instantly.</small>';
+        successDiv.style.display = 'block';
+      }
       form.reset();
-      setTimeout(() => { if (successDiv) successDiv.style.display = 'none'; }, 5000);
+      setTimeout(() => { if (successDiv) successDiv.style.display = 'none'; }, 12000);
     } else {
       if (errorDiv) errorDiv.style.display = 'block';
     }
