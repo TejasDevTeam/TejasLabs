@@ -129,7 +129,7 @@ function initFaq() {
 
 /* ===== CONTACT FORM ===== */
 const WEB3FORMS_KEY = '9afa997e-87a9-4057-aca3-2e5007f82d74';
-const SHEETS_URL    = ''; // paste Google Apps Script Web App URL here when ready
+const SHEETS_URL    = 'https://script.google.com/macros/s/AKfycbw7nc9NkHG7Uvgt1z-1OuFAUWduQTQkCyLX62jTLafqKaGODUrZSSS1vHHgeKVk_Mvn5g/exec';
 
 async function initContactForm() {
   const form = document.getElementById('contactForm');
