@@ -163,22 +163,11 @@ img { max-width: 100%; display: block; }
   max-width: 1100px;
   margin: 0 auto;                 /* centre-align on large screens */
 }
-.app-hero-banner::after {
-  /* subtle gradient at bottom of FG to blend into the card below */
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 72px;
-  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.18));
-  pointer-events: none;
-}
 .app-hero-banner img.hero-fg {
-  /* FG images are ~2:1 (512×250). 48.8vw tracks that ratio naturally.
-     Clamp keeps it sensible on mobile and large screens alike. */
+  /* Natural width-driven sizing — no cropping ever.
+     Banner is capped at max-width:1100px so max height ~537px on desktop. */
   width: 100%;
-  height: clamp(180px, 48.8vw, 360px);
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
 }
 .app-hero-banner img.hero-icon {
