@@ -131,11 +131,23 @@ function initFaq() {
 const WEB3FORMS_KEY = '9afa997e-87a9-4057-aca3-2e5007f82d74';
 const SHEETS_URL    = 'https://script.google.com/macros/s/AKfycbw7nc9NkHG7Uvgt1z-1OuFAUWduQTQkCyLX62jTLafqKaGODUrZSSS1vHHgeKVk_Mvn5g/exec';
 
-/* Generate a unique support ticket token e.g. DTT-A3X9K2M1
+/* App name → 3-letter prefix so developer sees which app at a glance */
+const APP_PREFIX = {
+  'KhetBook (Agri Register)': 'KHB',
+  'Master Unit Calc':         'MUC',
+  'Mastero':                  'MST',
+  'Money Trail':              'MTR',
+  'My Class Manager':         'MCM',
+  'My Sports Academy':        'MSA',
+  'Yoga Rhythm':              'YGR',
+};
+
+/* Generate a unique support ticket token e.g. KHB-A3X9K2M1
    Uses unambiguous chars (no 0/O, 1/I) for easy readability */
-function generateToken() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  let t = 'DTT-';
+function generateToken(appName) {
+  const prefix = APP_PREFIX[appName] || 'SUP';
+  const chars  = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let t = prefix + '-';
   for (let i = 0; i < 8; i++) t += chars[Math.floor(Math.random() * chars.length)];
   return t;
 }
@@ -157,7 +169,8 @@ async function initContactForm() {
     btn.disabled    = true;
     btn.textContent = 'Sending…';
 
-    const token = generateToken();
+    const appName = form.querySelector('[name="app"]').value;
+    const token   = generateToken(appName);
 
     /* Collect form data */
     const raw = {
