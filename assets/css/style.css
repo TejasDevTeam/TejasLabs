@@ -159,6 +159,9 @@ img { max-width: 100%; display: block; }
 .store-badge { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; background: var(--text); color: var(--bg); font-size: 0.85rem; font-weight: 600; transition: opacity var(--transition); }
 .store-badge:hover { opacity: 0.8; text-decoration: none; }
 .store-badge svg { width: 20px; height: 20px; fill: currentColor; }
+.store-badge-soon { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; background: var(--bg3); color: var(--text2); font-size: 0.85rem; font-weight: 600; border: 1px solid var(--border); cursor: default; opacity: 0.7; }
+.store-badge-soon svg { width: 20px; height: 20px; fill: currentColor; }
+.store-badge-soon span.coming { font-size: 0.7rem; font-weight: 500; opacity: 0.75; }
 
 /* Screenshots */
 .screenshots { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem; }

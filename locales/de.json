@@ -16,7 +16,7 @@
   },
   "app1": {
     "name": "KhetBook",
-    "tagline": "Landwirtschaftliches Hauptbuch, Ausgaben, Live-Mandi-Preise und Erntedagbuch",
+    "tagline": "Das digitale Gehirn Ihres Hofes — vom Feld zum Gewinn",
     "emoji": "🌾",
     "description": "KhetBook is a premium, offline-first farm business management and ledger app specially designed for small, medium, and progressive Indian farmers. Streamline your agricultural bookkeeping, track crop-wise profits, monitor seasonal budgets, check live Mandi rates, and manage family accounts — all in one secure, easy-to-use application. Whether you cultivate wheat, rice, cotton, sugarcane, fruits, or vegetables, KhetBook replaces paper diaries and complex spreadsheets, helping you increase profit margins by up to 20% through smart financial insights.",
     "feature1_title": "Digital Ledger & Khata",
@@ -36,7 +36,7 @@
   },
   "app2": {
     "name": "Master Unit Calc",
-    "tagline": "20+ Rechner in einer App — Finanzen, Gesundheit, Wissenschaft und mehr",
+    "tagline": "Eine App. Jede Berechnung. Null Werbung.",
     "emoji": "🧮",
     "description": "Master Unit Calc is your all-in-one calculator toolkit. Whether you're splitting a bill, calculating loan EMIs, converting units, checking your BMI, or doing scientific math — it's all here in one beautifully designed app. No switching between apps, no ads, just fast and accurate results.",
     "feature1_title": "Finance Calculators",
@@ -56,7 +56,7 @@
   },
   "app3": {
     "name": "Mastero",
-    "tagline": "Meistere jede Fähigkeit mit der 10.000-Stunden-Regel",
+    "tagline": "Täglich üben. Aufsteigen. Meister werden.",
     "emoji": "🏆",
     "description": "Are you serious about mastering a skill? Whether you're learning guitar, training for a sport, studying a language, or improving a professional craft — Mastero is the practice companion designed to help you grow consistently and effectively. Built on the principles of deliberate practice and long-term skill development, Mastero helps you track your effort, stay consistent, and turn daily practice into real progress.",
     "feature1_title": "Practice Timer & Session Log",
@@ -76,7 +76,7 @@
   },
   "app4": {
     "name": "Money Trail",
-    "tagline": "Ausgaben verfolgen, Budgets verwalten und Vermögen aufbauen",
+    "tagline": "Wissen, wo jeder Cent hingeht — und wo er als Nächstes hinsoll.",
     "emoji": "💰",
     "description": "Managing your money shouldn't be complicated. Money Trail helps you track expenses, plan budgets, and achieve financial goals — all in one simple, powerful app. Whether it's daily spending or long-term savings, you get complete clarity and control over your finances. Works offline, no internet required, with biometric security and optional cloud sync.",
     "feature1_title": "Expense & Income Tracking",
@@ -96,7 +96,7 @@
   },
   "app5": {
     "name": "My Class Manager",
-    "tagline": "Anwesenheit, Gruppen und Schülerkommunikation verwalten",
+    "tagline": "Führen Sie Ihre Akademie wie ein Profi — Anwesenheit, Gruppen und mehr.",
     "emoji": "📚",
     "description": "My Class Manager is the ultimate all-in-one solution for academy owners, coaches, and administrators to streamline their day-to-day operations. Whether you run a sports academy, tuition centre, or fitness studio, Class Manager makes it effortless to organise your business with smart batch management, attendance tracking, and role-based access.",
     "feature1_title": "Smart Batch Management",
@@ -116,7 +116,7 @@
   },
   "app6": {
     "name": "My Sports Academy",
-    "tagline": "Spieler, Anwesenheit, Gebühren und Coaching in einer App verwalten",
+    "tagline": "Vom Trainingsplatz bis zur Verwaltung — alles in einer App.",
     "emoji": "⚽",
     "description": "My Sports Academy is a complete sports academy management app designed for cricket academies, football clubs, and multi-sport training centres. Streamline your daily operations with tools to manage players, track attendance, monitor fees, and handle enquiries — all from one easy-to-use platform with multi-user roles for Admins, Coaches, and Parents.",
     "feature1_title": "Player & Batch Management",
@@ -136,7 +136,7 @@
   },
   "app7": {
     "name": "Yoga Rhythm",
-    "tagline": "Suryanamaskar & Pranayama-Leitfaden mit integriertem Yoga-Timer",
+    "tagline": "Atmen. Fließen. Wachsen. Ihre Yoga-Reise beginnt hier.",
     "emoji": "🧘",
     "description": "Find Your Flow. Master Your Breath. Track Your Progress. Yoga Rhythm is your ultimate wellness companion for both beginners starting their holistic journey and advanced practitioners perfecting their sequences. Whether you want to energise your morning with Suryanamaskar, find deep calm through Pranayama, or build your own custom workout flows, Yoga Rhythm gives you the tools to practice perfectly at your own pace.",
     "feature1_title": "Suryanamaskar & Pranayama",
