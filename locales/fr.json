@@ -172,7 +172,7 @@
     "app_label": "App",
     "s1_title": "Introduction",
     "s1_body1": "Your privacy is important to us. This Privacy Policy explains how ",
-    "s1_body2": " (\"the App\"), developed by DevTeamTejas, collects, uses, and protects your information when you use our App.",
+    "s1_body2": " (\"the App\"), developed by TejasDevLabs, collects, uses, and protects your information when you use our App.",
     "s2_title": "Information We Collect",
     "s2_body": "We may collect the following types of information:",
     "s2_li1": "<strong>Information you provide:</strong> Name, email address, and other details you voluntarily submit.",
@@ -233,12 +233,12 @@
     "success": "Thanks! Your message has been sent. We'll be in touch soon."
   },
   "footer": {
-    "company": "DevTeamTejas",
+    "company": "TejasDevLabs",
     "tagline": "Des applications que les gens adorent.",
     "apps_col": "Applications",
     "legal_col": "Mentions légales",
     "contact_col": "Contact",
     "email": "devteamtejas@gmail.com",
-    "copyright": "© 2026 DevTeamTejas. Tous droits réservés."
+    "copyright": "© 2026 TejasDevLabs. Tous droits réservés."
   }
 }

@@ -189,7 +189,7 @@ async function initContactForm() {
       const fd = new FormData();
       fd.append('access_key', WEB3FORMS_KEY);
       fd.append('subject',    '[' + token + '] Support — ' + raw.subject);
-      fd.append('from_name',  'DevTeamTejas Support');
+      fd.append('from_name',  'TejasDevLabs Support');
       Object.entries(raw).forEach(([k, v]) => fd.append(k, v));
 
       const w3res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
