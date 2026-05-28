@@ -3,9 +3,12 @@
 const SUPPORTED_LANGS = ['en', 'hi', 'fr', 'es', 'de'];
 const DEFAULT_LANG = 'en';
 
-/* Resolve the root path regardless of how deep the page is */
+/* Resolve the root path regardless of how deep the page is.
+   On GitHub Pages the pathname starts with /reponame/, adding an extra level. */
 function rootPath() {
-  const depth = (window.location.pathname.match(/\//g) || []).length - 1;
+  const slashes = (window.location.pathname.match(/\//g) || []).length;
+  const isGitHubPages = window.location.hostname.endsWith('github.io');
+  const depth = slashes - 1 - (isGitHubPages ? 1 : 0);
   return depth <= 0 ? './' : '../'.repeat(depth);
 }
 
