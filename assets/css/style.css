@@ -103,6 +103,67 @@ img { max-width: 100%; display: block; }
 .section-title { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 0.5rem; }
 .section-sub { color: var(--text2); margin-bottom: 2.5rem; }
 
+/* ===== ABOUT CARD ===== */
+.about-card-section {
+  background: var(--bg2);
+  padding: 2.5rem 1rem 0;
+}
+.about-card {
+  max-width: 1100px; margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem 2.5rem 2rem;
+  box-shadow: 0 4px 32px rgba(108,99,255,0.13);
+  display: flex; flex-direction: column; gap: 2rem;
+}
+.about-card-top { display: flex; flex-direction: column; gap: 0.75rem; }
+.about-org-badge {
+  display: inline-block; align-self: flex-start;
+  padding: 5px 18px; border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+  color: #fff; font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.about-card-top h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; margin: 0;
+}
+.about-motto {
+  font-size: 1rem; color: var(--text2); font-style: italic;
+  border-left: 3px solid var(--accent); padding-left: 1rem;
+  margin: 0; line-height: 1.6;
+}
+.about-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+.service-item {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(108,99,255,0.18);
+  border-color: var(--accent);
+}
+.service-icon { font-size: 2rem; line-height: 1; }
+.service-item h3 { font-size: 0.975rem; font-weight: 700; margin: 0; }
+.service-item p { font-size: 0.86rem; color: var(--text2); line-height: 1.65; margin: 0; }
+.about-card-cta { display: flex; }
+.btn-accent {
+  display: inline-block; padding: 0.7rem 2rem; border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+  color: #fff; font-weight: 700; font-size: 0.95rem;
+  border: 2px solid transparent; transition: all var(--transition);
+}
+.btn-accent:hover { opacity: 0.88; text-decoration: none; transform: translateY(-1px); }
+@media (max-width: 700px) {
+  .about-card { padding: 1.75rem 1.25rem 1.5rem; gap: 1.5rem; }
+}
+
 /* ===== APP GRID ===== */
 .apps-grid {
   display: grid;
