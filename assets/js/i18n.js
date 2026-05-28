@@ -127,14 +127,71 @@ function initFaq() {
   });
 }
 
-/* ===== CONTACT FORM (demo) ===== */
-function initContactForm() {
+/* ===== CONTACT FORM ===== */
+const WEB3FORMS_KEY = '9afa997e-87a9-4057-aca3-2e5007f82d74';
+const SHEETS_URL    = ''; // paste Google Apps Script Web App URL here when ready
+
+async function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
-  form.addEventListener('submit', e => {
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const msg = document.getElementById('formSuccess');
-    if (msg) { msg.style.display = 'block'; form.reset(); setTimeout(() => msg.style.display = 'none', 4000); }
+
+    const btn        = form.querySelector('.btn-submit');
+    const successDiv = document.getElementById('formSuccess');
+    const errorDiv   = document.getElementById('formError');
+    if (successDiv) successDiv.style.display = 'none';
+    if (errorDiv)   errorDiv.style.display   = 'none';
+
+    const origText   = btn.textContent;
+    btn.disabled     = true;
+    btn.textContent  = 'Sending…';
+
+    /* Collect form data */
+    const raw = {
+      name:    form.querySelector('[name="name"]').value.trim(),
+      email:   form.querySelector('[name="email"]').value.trim(),
+      subject: form.querySelector('[name="subject"]').value.trim(),
+      app:     form.querySelector('[name="app"]').value,
+      message: form.querySelector('[name="message"]').value.trim(),
+    };
+
+    let ok = false;
+
+    try {
+      /* 1 — Web3Forms (email notification) */
+      const fd = new FormData();
+      fd.append('access_key', WEB3FORMS_KEY);
+      fd.append('subject',    'Support Request — DevTeamTejas: ' + raw.subject);
+      fd.append('from_name',  'DevTeamTejas Support');
+      Object.entries(raw).forEach(([k, v]) => fd.append(k, v));
+
+      const w3res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+      const w3json = await w3res.json();
+      ok = w3json.success;
+
+      /* 2 — Google Sheets (storage) — runs when SHEETS_URL is configured */
+      if (SHEETS_URL) {
+        fetch(SHEETS_URL, {
+          method: 'POST',
+          mode:   'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(raw),
+        }).catch(() => {}); // non-blocking; don't fail the form if Sheets is down
+      }
+    } catch (_) { ok = false; }
+
+    btn.disabled    = false;
+    btn.textContent = origText;
+
+    if (ok) {
+      if (successDiv) { successDiv.style.display = 'block'; }
+      form.reset();
+      setTimeout(() => { if (successDiv) successDiv.style.display = 'none'; }, 5000);
+    } else {
+      if (errorDiv) errorDiv.style.display = 'block';
+    }
   });
 }
 

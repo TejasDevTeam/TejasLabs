@@ -51,24 +51,25 @@
   <div class="container">
     <h2 class="section-title mb-2" data-i18n="support.contact_title">Contact Us</h2>
     <p class="section-sub" data-i18n="support.contact_sub">Fill out the form and we'll reply within 1–2 business days.</p>
-    <div id="formSuccess" style="display:none;padding:1rem;background:#d4edda;border:1px solid #c3e6cb;border-radius:8px;margin-bottom:1rem;color:#155724" data-i18n="support.success">Thanks! Message sent.</div>
+        <div id="formSuccess" style="display:none;padding:1rem;background:#d4edda;border:1px solid #c3e6cb;border-radius:8px;margin-bottom:1rem;color:#155724" data-i18n="support.success">Thanks! Message sent.</div>
+    <div id="formError" style="display:none;padding:1rem;background:#f8d7da;border:1px solid #f5c6cb;border-radius:8px;margin-bottom:1rem;color:#721c24">Something went wrong. Please try again or email devteamtejas@gmail.com.</div>
     <form class="support-form" id="contactForm" novalidate>
-      <div class="form-group"><label data-i18n="support.name_label">Your Name</label><input type="text" required data-i18n-placeholder="support.name_ph" placeholder="Jane Smith" /></div>
-      <div class="form-group"><label data-i18n="support.email_label">Email</label><input type="email" required data-i18n-placeholder="support.email_ph" placeholder="jane@example.com" /></div>
-      <div class="form-group"><label data-i18n="support.subject_label">Subject</label><input type="text" required data-i18n-placeholder="support.subject_ph" placeholder="Brief description" /></div>
+      <div class="form-group"><label data-i18n="support.name_label">Your Name</label><input type="text" name="name" required data-i18n-placeholder="support.name_ph" placeholder="Jane Smith" /></div>
+      <div class="form-group"><label data-i18n="support.email_label">Email</label><input type="email" name="email" required data-i18n-placeholder="support.email_ph" placeholder="jane@example.com" /></div>
+      <div class="form-group"><label data-i18n="support.subject_label">Subject</label><input type="text" name="subject" required data-i18n-placeholder="support.subject_ph" placeholder="Brief description" /></div>
       <div class="form-group">
         <label data-i18n="support.app_select_label">Related App</label>
         <select id="appSelect" name="app">
-          <option value="app1"  data-i18n="app1.name">KhetBook (Agri Register)</option>
-          <option value="app2" selected data-i18n="app2.name">Master Unit Calc</option>
-          <option value="app3"  data-i18n="app3.name">Mastero</option>
-          <option value="app4"  data-i18n="app4.name">Money Trail</option>
-          <option value="app5"  data-i18n="app5.name">My Class Manager</option>
-          <option value="app6"  data-i18n="app6.name">My Sports Academy</option>
-          <option value="app7"  data-i18n="app7.name">Yoga Rhythm</option>
+          <option value="KhetBook (Agri Register)"  data-i18n="app1.name">KhetBook (Agri Register)</option>
+          <option value="Master Unit Calc" selected data-i18n="app2.name">Master Unit Calc</option>
+          <option value="Mastero"  data-i18n="app3.name">Mastero</option>
+          <option value="Money Trail"  data-i18n="app4.name">Money Trail</option>
+          <option value="My Class Manager"  data-i18n="app5.name">My Class Manager</option>
+          <option value="My Sports Academy"  data-i18n="app6.name">My Sports Academy</option>
+          <option value="Yoga Rhythm"  data-i18n="app7.name">Yoga Rhythm</option>
         </select>
       </div>
-      <div class="form-group"><label data-i18n="support.message_label">Message</label><textarea id="message" required data-i18n-placeholder="support.message_ph" placeholder="Describe your issue..."></textarea></div>
+      <div class="form-group"><label data-i18n="support.message_label">Message</label><textarea name="message" id="message" required data-i18n-placeholder="support.message_ph" placeholder="Describe your issue..."></textarea></div>
       <button type="submit" class="btn-submit" data-i18n="support.submit">Send Message</button>
     </form>
   </div>
